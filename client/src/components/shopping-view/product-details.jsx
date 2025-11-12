@@ -6,7 +6,8 @@ import { Separator } from "../ui/separator";
 import { Input } from "../ui/input";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, fetchCartItems } from "@/store/shop/cart-slice";
-import { useToast } from "../ui/use-toast";
+// import { useToast } from "../ui/use-toast";
+import { toast } from "sonner";
 import { setProductDetails } from "@/store/shop/products-slice";
 import { Label } from "../ui/label";
 import StarRatingComponent from "../common/star-rating";
@@ -21,7 +22,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
   const { cartItems } = useSelector((state) => state.shopCart);
   const { reviews } = useSelector((state) => state.shopReview);
 
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   function handleRatingChange(getRating) {
     console.log(getRating, "getRating");

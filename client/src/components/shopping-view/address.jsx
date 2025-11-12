@@ -10,7 +10,8 @@ import {
   fetchAllAddresses,
 } from "@/store/shop/address-slice";
 import AddressCard from "./address-card";
-import { useToast } from "../ui/use-toast";
+// import { useToast } from "../ui/use-toast";
+import { toast } from "sonner";
 
 const initialAddressFormData = {
   address: "",
@@ -26,7 +27,7 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const { addressList } = useSelector((state) => state.shopAddress);
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   function handleManageAddress(event) {
     event.preventDefault();

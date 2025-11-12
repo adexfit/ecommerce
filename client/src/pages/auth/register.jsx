@@ -1,5 +1,6 @@
 import CommonForm from "@/components/common/form";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
+import { toast } from "sonner";
 import { registerFormControls } from "@/config";
 import { registerUser } from "@/store/auth-slice";
 import { useState } from "react";
@@ -16,7 +17,7 @@ function AuthRegister() {
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   function onSubmit(event) {
     event.preventDefault();

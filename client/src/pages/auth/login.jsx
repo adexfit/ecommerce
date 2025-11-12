@@ -1,5 +1,6 @@
 import CommonForm from "@/components/common/form";
-import { useToast } from "@/components/ui/use-toast";
+// import { useToast } from "@/components/ui/use-toast";
+import { toast } from "sonner";
 import { loginFormControls } from "@/config";
 import { loginUser } from "@/store/auth-slice";
 import { useState } from "react";
@@ -14,7 +15,7 @@ const initialState = {
 function AuthLogin() {
   const [formData, setFormData] = useState(initialState);
   const dispatch = useDispatch();
-  const { toast } = useToast();
+  // const { toast } = useToast();
 
   function onSubmit(event) {
     event.preventDefault();
